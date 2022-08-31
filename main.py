@@ -17,7 +17,7 @@ from email.mime.multipart import MIMEMultipart
 # for showing when the email was sent 
 import datetime
 
-# for scraping reddit
+# for scraping Reddit
 import praw
 
 # for executing the code at a certain time everyday 
@@ -27,7 +27,7 @@ import time
 # defining "now" which is when the email is going to be sent, which is needed for the subject
 now = datetime.datetime.now()
 
-# Request perms to send email
+# request perms to send email
 SCOPES = ['https://mail.google.com/']
 our_email = 'YOUR-EMAIL'
 
@@ -64,18 +64,18 @@ scraped_posts = subreddit.hot()
 
 # scraping the posts' titles and inserted URLs and copying the info onto a text file
 def scraping():
-    f = open("stuff.txt", 'w', encoding="utf-8")
+    f = open("posts.txt", 'w', encoding="utf-8")
     for post in scraped_posts:
         f.write(str(post.title) + "\n")
         f.write(str(post.url) + "\n")
         f.write("-----\n")
 scraping()
 
-# customizing the subject such that it matches the date it's sent
+# customizing the email's subject such that it matches the date it's sent
 subject = "Top News Stories from Reddit" + " " + str(now.day) + "-" + str(now.month) + "-" + str(now.year)
 
 # copy the info from the text file
-a = open("stuff.txt", 'r', encoding="utf-8")
+a = open("posts.txt", 'r', encoding="utf-8")
 info = a.read()
 
 # takes the message parameters and builds the email accordingly
