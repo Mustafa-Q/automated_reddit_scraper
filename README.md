@@ -22,7 +22,8 @@ Head back to the "Credentials" page, click the Create Credentials button, and se
 
 ![Screenshot 2022-09-03 135954](https://user-images.githubusercontent.com/62267192/188282814-dfe77491-7363-4eb4-931a-3f0f9c434516.png)
 
-Click on DOWNLOAD JSON and, if necessary, rename the file to credentials.json and put it in the current directory of the project.
+Click on DOWNLOAD JSON and, if necessary, rename the file to credentials.json and put it in the current directory of the project. After writing and calling the gmail_authenticate() function for the first time, you will be prompted to your default browser to accept the permissions required for this app. If you see a window that indicates the app isn't verified, just want to head to Advanced and click on "Go to Gmail API Python (unsafe)":
+![image](https://user-images.githubusercontent.com/62267192/188284250-196d5817-8304-428f-9278-735eb00319c6.png)
 
 ## Setting up the Reddit API
 Running the following in Command Prompt:
